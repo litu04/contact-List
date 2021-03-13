@@ -24,6 +24,11 @@ app.get('/',function(req,res){
     //res.send('<h1>Cool! It is running or is it?</h1>');
 });
 
+app.get('/practice',function(req,res){
+    return res.render('practice',{
+        title: 'Playing with EJS'
+    });
+})
 
 app.listen(port,function(err){
     if(err){
