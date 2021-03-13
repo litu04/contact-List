@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/litu04/contact-List#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
