@@ -1,0 +1,22 @@
+{
+  "name": "contact_list",
+  "version": "1.0.0",
+  "description": "a basic contact list while learning express.js and mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litu04/contact-List.git"
+  },
+  "author": "dk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/litu04/contact-List/issues"
+  },
+  "homepage": "https://github.com/litu04/contact-List#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
