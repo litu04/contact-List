@@ -15,15 +15,51 @@ app.set('view engine','ejs');
 // accessing the path of the views where we can rendered the HTMl file into the browser
 app.set('views',path.join(__dirname,'views'));
 
+// using middleware to read and analyzed the parse encoded data
+app.use(express.urlencoded());
+
+// accessing the static files through middleware
+app.use(express.static('assets'));
+
+// creating a contact list
+
+contactList = [
+    {
+        name: 'Debraj',
+        phone: 9876543215
+    },
+    {
+        name: 'Pintu',
+        phone: 7645129839
+    },
+    {
+        name: 'Riya',
+        phone: 8298761245
+    }
+]
+
 app.get('/',function(req,res){
     //console.log("url:",req);
     //console.log(__dirname);
     return res.render('home', {
-        title: "Contact List"
+        title: "Contact List",
+        contact_list: contactList
     });
     //res.send('<h1>Cool! It is running or is it?</h1>');
 });
 
+app.post('/create-contact',function(req,res){
+    //console.log(req.body);
+    console.log(req.body.name);
+    console.log(req.body.phone);
+    // contactList.push({
+    //     name: req.body.name,
+    //     phone: req.body.phone
+    // });
+
+    contactList.push(req.body);
+    return res.redirect('back');
+})
 
 app.listen(port,function(err){
     if(err){
