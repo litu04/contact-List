@@ -61,6 +61,23 @@ app.post('/create-contact',function(req,res){
     return res.redirect('back');
 })
 
+// deleting a contact list using query params and string params
+
+app.get('/delete-contact',function(req,res){
+    // get the query from the url
+    //let phone = req.params.phone  // for string param
+    let phone = req.query.phone;  // for query param
+    console.log(req.query);
+
+    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+
+    if (contactIndex != -1){
+        contactList.splice(contactIndex, 1);
+    }
+
+    return res.redirect('back');
+});
+
 app.listen(port,function(err){
     if(err){
         console.log("Error in running the express server");
