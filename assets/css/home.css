@@ -9,6 +9,10 @@ body{
     margin-right: 20%;
 }
 
+#page-heading div{
+    display: inline;
+}
+
 #contact-list-container ul{
     list-style: none;
     padding: 0;
@@ -30,6 +34,11 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 90%;
+}
+
+.contact .details i{
+    margin-top: 5px;
 }
 
 .contact p{
@@ -48,6 +57,7 @@ body{
 form{
     margin-left: 25%;
     margin-right: 25%;
+    width: 30%;
 }
 
 form input{
@@ -57,5 +67,11 @@ form input{
     border-left: none;
     border-right: none;
     font-size: 1rem;
+}
 
+form button{
+    font-size: 0.8rem;
+    box-shadow: 0 0 1px 1px lightgray;
+    margin-left: 5px;
+    padding-top: 2px;
 }

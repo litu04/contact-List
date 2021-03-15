@@ -6,6 +6,9 @@ const path = require('path');
 
 const port = 8000;
 
+//import the db from config(mongoose.js)
+const db = require('./config/mongoose');
+
 // firing up the express server
 const app = express();  // here in app we are keeping all the express module which will be needed later on
 
@@ -65,7 +68,7 @@ app.post('/create-contact',function(req,res){
 
 app.get('/delete-contact',function(req,res){
     // get the query from the url
-    //let phone = req.params.phone  // for string param
+    //commitlet phone = req.params.phone  // for string param
     let phone = req.query.phone;  // for query param
     console.log(req.query);
 
